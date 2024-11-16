@@ -14,27 +14,27 @@
   }
   .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Três colunas */
-    gap: 30px; /* Espaçamento entre os cards */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
     padding: 10px;
-    max-width: 1000px; /* Limita a largura total do layout */
+    max-width: 1000px; 
     margin: auto;
   }
   
   .card {
-    background-color: #14253d;
+    background-color: #420707;
     border-radius: 10px;
     padding: 15px;
     color: white;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    width: 100%; /* Adapta o tamanho ao contêiner */
+    width: 100%; 
   }
   
   .card:hover {
-    transform: scale(1.05); /* Salta para frente */
-    background-color: #1f3d5b; /* Muda a cor do fundo */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Intensifica a sombra */
+    transform: scale(1.05); 
+    background-color: #d65008; 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); 
   }
   
   .image-container {
@@ -44,7 +44,7 @@
   }
   
   .card:hover .image-container {
-    transform: scale(1.05); /* Zoom leve na imagem */
+    transform: scale(1.05); 
   }
   
   .image {
@@ -56,17 +56,15 @@
   
   @media (max-width: 768px) {
     .container {
-      grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+      grid-template-columns: repeat(2, 1fr); 
     }
   }
   
   @media (max-width: 480px) {
     .container {
-      grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+      grid-template-columns: 1fr;
     }
   }
-  
-  
   
   .title {
     margin-top: 15px;
@@ -96,7 +94,14 @@
     width: 15px;
     margin-right: 5px;
   }
-  
+  .clock-icon {
+    width: 15px; 
+    margin-right: 5px; 
+    position: relative;
+    top: 3px; 
+    left: 2px; 
+}
+
   .price span {
     color: #00fff7;
     font-weight: bold;
