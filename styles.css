@@ -6,45 +6,68 @@
   body {
     font-family: Arial, sans-serif;
     background-color: #f0f4f8;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    gap: 30px; /* Espaçamento entre os cards */
+    padding: 10px;
+    max-width: 1000px; /* Limita a largura total do layout */
+    margin: auto;
   }
   
   .card {
-    width: 300px;
     background-color: #14253d;
-    border-radius: 15px;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 15px;
     color: white;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    width: 100%; /* Adapta o tamanho ao contêiner */
   }
   
   .card:hover {
-    transform: scale(1.1);
-    background-color: #1f3d5b; 
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); 
+    transform: scale(1.05); /* Salta para frente */
+    background-color: #1f3d5b; /* Muda a cor do fundo */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Intensifica a sombra */
   }
   
   .image-container {
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
   }
   
   .card:hover .image-container {
-    transform: scale(1.05); 
+    transform: scale(1.05); /* Zoom leve na imagem */
   }
   
   .image {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 10px;
+    border-radius: 8px;
   }
+  
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+  }
+  
+  
   
   .title {
     margin-top: 15px;
